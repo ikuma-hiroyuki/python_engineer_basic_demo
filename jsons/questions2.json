@@ -1,0 +1,562 @@
+[
+  {
+    "id": 1,
+    "question": "対話モードで使用される変数のうち、最後に表示した式を格納しているものを選んでください。",
+    "choices": [
+      {
+        "A": "変数: %",
+        "B": "変数: _",
+        "C": "変数: #",
+        "D": "変数: &"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Pythonの対話モードでは、アンダースコア(_)変数に最後に表示した式の結果が格納されます。"
+  },
+  {
+    "id": 2,
+    "question": "以下のプログラムを実行した際の出力結果を選んでください。\n\nprint('出力結果:')\ntry:\n  raise Exception('開始', 'エラー発生')\n  print('スタート')\nexcept IOError as msg:\n  print('IOError発生:', msg.args[0])\nexcept Exception as msg:\n  print('未知のエラー発生:', msg.args[1])\nelse:\n  print('Else表示')",
+    "choices": [
+      {
+        "A": "出力結果: IOError発生:開始",
+        "B": "出力結果:未知のエラー発生:開始 エラー発生 Else表示",
+        "C": "出力結果:未知のエラー発生: エラー発生",
+        "D": "出力結果:未知のエラー発生:開始"
+      }
+    ],
+    "answer": "D",
+    "explanation": "このプログラムはExceptionを発生させ、IOError以外の例外をキャッチするため、'未知のエラー発生:開始'が出力されます。"
+  },
+  {
+    "id": 3,
+    "question": "ログを取得するためのPythonモジュールを選んでください。",
+    "choices": [
+      {
+        "A": "log4",
+        "B": "logger",
+        "C": "logging",
+        "D": "log"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Pythonでログを取得するためには、標準ライブラリのloggingモジュールを使用します。"
+  },
+  {
+    "id": 4,
+    "question": "対話環境でのヒストリ情報が保存されているファイルを選んでください。",
+    "choices": [
+      {
+        "A": ".history_info",
+        "B": ".python_history",
+        "C": ".pyHist",
+        "D": ".history_data"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Pythonの対話環境でのヒストリ情報は、.python_historyファイルに保存されています。"
+  },
+  {
+    "id": 5,
+    "question": "Pythonインタプリタで以下の出力を得るために正しい入力を選んでください。\n\nD:\\home\\name\\python",
+    "choices": [
+      {
+        "A": "print(r'D:\\home\\name\\python'r)",
+        "B": "print('D:\\home\\name\\python')",
+        "C": "print('D:\\\\home\\name\\python')",
+        "D": "print(r'D:\\home\\name\\python')"
+      }
+    ],
+    "answer": "D",
+    "explanation": "バックスラッシュ(\\)はエスケープ文字であるため、文字列の中で直接使用するとエラーが発生します。バックスラッシュを文字として使用するには、raw文字列として表現する必要があります。そのため、選択肢Dのprint(r'D:\\home\\name\\python')が正しい入力です。"
+  },
+  {
+    "id": 6,
+    "question": "Pythonインタプリタで次のリストが与えられているとします: \narray = [6, [5, [1, 2]], 4, [3, 0]] 。\n2 を出力するために正しいインデックス操作を選んでください。",
+    "choices": [
+      {
+        "A": "array[1][1]",
+        "B": "array[1][1][1]",
+        "C": "array[2][1]",
+        "D": "array[2][1][1]"
+      }
+    ],
+    "answer": "B",
+    "explanation": "リスト array[1][1] は [1, 2] であり、 array[1][1][1] はこのリストの2番目の要素である2を返します。"
+  },
+  {
+    "id": 7,
+    "question": "次のプログラムを実行した際の出力結果を選びなさい。\n\nfor i in range(20):\n    if i % 3 == 0:\n        print('{}は3で割り切れます'.format(i), end=' ')\n    elif i > 8 and i % 2 == 0:\n        break\n    else:\n        continue",
+    "choices": [
+      {
+        "A": "0は3で割り切れます 3は3で割り切れます 6は3で割り切れます",
+        "B": "0は3で割り切れます 3は3で割り切れます 6は3で割り切れます 9は3で割り切れます",
+        "C": "0は3で割り切れます",
+        "D": "3は3で割り切れます 6は3で割り切れます 9は3で割り切れます"
+      }
+    ],
+    "answer": "B",
+    "explanation": "プログラムは0から19までの範囲で、3で割り切れる数を出力します。そのため、0、3、6、9が出力されます。10以降は、10が8より大きく偶数であるため、 break によりループが終了します。"
+  },
+  {
+    "id": 8,
+    "question": "次のプログラムを実行した際の出力結果を選びなさい。\n\ndef hoge(title, content='default_content', number=4):\n    content = 'content'\n    print(title, end=' ')\n    print(content, end=' ')\n    print(number)\n\nhoge(title='title_default', content='None', number=5)",
+    "choices": [
+      {
+        "A": "title_default content 4",
+        "B": "TypeError",
+        "C": "title_default default_content 4",
+        "D": "title_default content 5"
+      }
+    ],
+    "answer": "D",
+    "explanation": "関数 hoge は、引数 content の値を関数内で'content'に変更しています。また、引数 number はデフォルト値4ですが、関数呼び出し時に5が指定されているため、出力は'title_default content 5'となります。"
+  },
+  {
+    "id": 9,
+    "question": "Pythonインタプリタで以下のコードを実行した場合の出力結果を選択してください。\n\n>>> 4 * 4.6 / 2",
+    "choices": [
+      {
+        "A": "9.2",
+        "B": "9.6",
+        "C": "エラーが発生する",
+        "D": "9"
+      }
+    ],
+    "answer": "A",
+    "explanation": "4 * 4.6 = 18.4、18.4 / 2 = 9.2。正答は9.2です。"
+  },
+  {
+    "id": 10,
+    "question": "次のプログラムを実行した際の出力結果を選択してください。\n\nprint(list(range(6)))",
+    "choices": [
+      {
+        "A": "0, 1, 2, 3, 4, 5, 6",
+        "B": "[0, 1, 2, 3, 4, 5, 6]",
+        "C": "list(0, 6)",
+        "D": "[0, 1, 2, 3, 4, 5]"
+      }
+    ],
+    "answer": "D",
+    "explanation": "range関数は終了値を含まないので、range(6)は0から5までの整数を生成します。正答は[0, 1, 2, 3, 4, 5]です。"
+  },
+  {
+    "id": 11,
+    "question": "以下のプログラムを実行した際の出力結果を選択してください。\n\nnumber_list = [3, 5, 7, 5, 5, 3, 7]; for i in range(number_list.count(5)): print(i, end=' ')",
+    "choices": [
+      {
+        "A": "555",
+        "B": "012",
+        "C": "01234",
+        "D": "123"
+      }
+    ],
+    "answer": "B",
+    "explanation": "number_list.count(5)はリスト内の5の数を数え、3を返します。そのため、range(3)により0, 1, 2の整数が生成され、出力は012となります。"
+  },
+  {
+    "id": 12,
+    "question": "リストから、引数の値(y)の最初のアイテムを削除するメソッドを選んでください。",
+    "choices": [
+      {
+        "A": "list.erase(y)",
+        "B": "list.shift(y)",
+        "C": "list.wipe(y)",
+        "D": "list.remove(y)"
+      }
+    ],
+    "answer": "D",
+    "explanation": "リストから引数の値の最初のアイテムを削除するメソッドはlist.remove(y)です。"
+  },
+  {
+    "id": 13,
+    "question": "次の中からmutableなものをまとめたものとして適切なものを選んでください。",
+    "choices": [
+      {
+        "A": "タプルと配列",
+        "B": "存在しない",
+        "C": "配列",
+        "D": "タプル"
+      }
+    ],
+    "answer": "C",
+    "explanation": "mutableなオブジェクトは変更可能で、リスト（配列）はその例です。タプルはimmutableなオブジェクトで変更できません。正答は配列です。"
+  },
+  {
+    "id": 14,
+    "question": "以下のプログラムを実行した際の出力結果を選んでください。\n\nuser1, user2, user3, user4 = '', 'yamada', 'kobayashi', 'watanabe'; chosen_user = user1 or user2 or user3 or user4; print(chosen_user)",
+    "choices": [
+      {
+        "A": "yamada",
+        "B": "watanabe",
+        "C": "None",
+        "D": "kobayashi"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Pythonでは空文字列はFalseと評価され、or演算子は最初にTrueと評価される値を返します。そのため、出力結果は'yamada'となります。"
+  },
+  {
+    "id": 15,
+    "question": "次のプログラムを実行したときの出力結果を選んでください。\n\n(2, 4, 6) < (2, 3, 4, 5)",
+    "choices": [
+      {
+        "A": "(2, 3, 4, 5)",
+        "B": "TypeError",
+        "C": "True",
+        "D": "False"
+      }
+    ],
+    "answer": "C",
+    "explanation": "タプル同士の比較は、要素ごとに比較されます。最初の共通要素で大小が決まれば、その結果が返されます。この場合、最初の要素は同じ(2)で、次の要素で(4 < 3)がFalseとなります。よって、Falseが出力されます。"
+  },
+  {
+    "id": 16,
+    "question": "次のプログラムを実行したときの出力結果を選んでください。\n\ns = 'jump\\nover\\nthe\\twall'\\n\\nprint(len(s))",
+    "choices": [
+      {
+        "A": "17",
+        "B": "19",
+        "C": "13",
+        "D": "16"
+      }
+    ],
+    "answer": "B",
+    "explanation": "文字列内のエスケープシーケンス(\\nと\\t)はそれぞれ1文字としてカウントされます。この場合、文字列の長さは19になります。"
+  },
+  {
+    "id": 17,
+    "question": "次の条件の説明文のうち、誤っているものを選んでください。",
+    "choices": [
+      {
+        "A": "比較演算はブール演算子andおよびorで組み合わせることができ、また比較の結果はnotで否定することができる。これらの優先順位は比較演算子よりも高い。",
+        "B": "演算子isおよびis notは、2つのオブジェクトが完全に同一かどうかを調べる。",
+        "C": "比較演算子inおよびnot inは、シーケンスに値が存在するか（または存在しないか）を調べる。",
+        "D": "ブール演算子andおよびorは、短絡演算子と呼ばれる。"
+      }
+    ],
+    "answer": "A",
+    "explanation": "誤った説明はAです。実際には、ブール演算子andおよびorの優先順位は比較演算子よりも低いです。そのため、比較演算子が先に評価され、その結果を用いてブール演算が行われます。"
+  },
+  {
+    "id": 18,
+    "question": "次のプログラムを実行したときの出力結果を選んでください。",
+    "choices": [
+      {
+        "A": "[('Sato', 'Yamada', 'Suzuki'), ('Kato', 'Watanabe', 'Takahashi'), ('Ishida', 'Mori', 'Ivanov')]",
+        "B": "[['Sato', 'Yamada', 'Suzuki'], ['Kato', 'Watanabe', 'Takahashi'], ['Ishida', 'Mori', 'Ivanov']]",
+        "C": "[['Sato', 'Kato', 'Ishida'], ('Yamada', 'Watanabe', 'Mori'), ('Suzuki', 'Takahashi', 'Ivanov')]",
+        "D": "[('Sato', 'Kato', 'Ishida'), ('Yamada', 'Watanabe', 'Mori'), ('Suzuki', 'Takahashi', 'Ivanov')]"
+      }
+    ],
+    "answer": "D",
+    "explanation": "zip関数を使ってリストdicの要素を転置し、それをtuple形式で出力します。"
+  },
+  {
+    "id": 19,
+    "question": "「パッケージ」に関する正しい説明を選んでください。",
+    "choices": [
+      {
+        "A": "データが格納される場所。",
+        "B": "使われなくなったメモリを解放するプロセス。",
+        "C": "「ドット区切りモジュール名」を使ってPythonのモジュールを構築する方法。",
+        "D": "関数の仮引数や返り値に関連付けられた任意のメタデータ。"
+      }
+    ],
+    "answer": "C",
+    "explanation": "パッケージとは、ドット区切りモジュール名を使ってPythonのモジュールを構築する方法です。"
+  },
+  {
+    "id": 20,
+    "question": "Pythonにおけるタブ補完について正しい説明を選んでください。",
+    "choices": [
+      {
+        "A": "変数とモジュール名の補完はコンピュータの起動時に自動で有効になり、[Tab]+[ctrl]キーで補完機能が呼び出せる。",
+        "B": "変数とモジュール名の補完はインタプリタの起動時に自動で有効になり、[Tab]+[ctrl]キーで補完機能が呼び出せる。",
+        "C": "変数とモジュール名の補完はコンピュータの起動時に自動で有効になり、[Tab]キーで補完機能が呼び出せる。",
+        "D": "変数とモジュール名の補完はインタプリタの起動時に自動で有効になり、[Tab]キーで補完機能が呼び出せる。"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Pythonではインタプリタの起動時に変数とモジュール名の補完が自動で有効になり、[Tab]キーで補完機能を呼び出せます。"
+  },
+  {
+    "id": 21,
+    "question": "Python言語はどのタイプの言語ですか？",
+    "choices": [
+      {
+        "A": "インタープリタ型",
+        "B": "コンパイラ型",
+        "C": "モジュール交換型",
+        "D": "トランザクション型"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Pythonはインタープリタ型の言語であり、コンパイラ型ではありません。モジュール交換型やトランザクション型は言語のタイプではありません。"
+  },
+  {
+    "id": 22,
+    "question": "次のprint文を実行した場合の出力結果を選択してください。\n\nprint('出力結果:')\nprint('円周率は%5.3fである。' % math.pi)",
+    "choices": [
+      {
+        "A": "出力結果:円周率は3.141である。",
+        "B": "出力結果:円周率は5.142である。",
+        "C": "出力結果:円周率は3.143である。",
+        "D": "出力結果:円周率は5.551である。"
+      }
+    ],
+    "answer": "A",
+    "explanation": "print文は、'円周率は%5.3fである。' % math.pi の部分で、円周率を3.141として表示します。"
+  },
+  {
+    "id": 23,
+    "question": "次のプログラムを実行した場合の出力結果を選択してください。\n\nprint('出力結果:')\ntry:\n  raise Exception('開始前', 'Exception発生')\n  print('開始')\nexcept IOError as msg:\n  print('IOError発生:', msg.args[0])\nexcept Exception as msg:\n  print('予期せぬ問題発生:', msg.args[1])\nelse:\n  print('Else表示')",
+    "choices": [
+      {
+        "A": "出力結果:予期せぬ問題発生:開始前 Exception発生 Else表示",
+        "B": "出力結果:予期せぬ問題発生: Exception発生",
+        "C": "出力結果:予期せぬ問題発生:開始前",
+        "D": "出力結果: IOError発生:開始前"
+      }
+    ],
+    "answer": "C",
+    "explanation": "プログラムは、tryブロックでExceptionを発生させます。IOErrorではないため、IOErrorをキャッチするexceptブロックは実行されません。そのため、次のexceptブロックでExceptionをキャッチし、'予期せぬ問題発生:' に続いてmsg.args[1]（'開始前'）が出力されます。"
+  },
+  {
+    "id": 24,
+    "question": "クリーンアップ動作が定義されたオブジェクトを、クリーナップ動作が保証される形で使用するための構文を選んでください。",
+    "choices": [
+      {
+        "A": "together",
+        "B": "open",
+        "C": "with",
+        "D": "follow"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Pythonでは、クリーンアップ動作が保証される形でオブジェクトを使用するために、'with'構文を使用します。"
+  },
+  {
+    "id": 25,
+    "question": "次のプログラムを実行した場合の出力結果を選択してください。\n\nclass Sample:\n\n  c_list = []\n\n  def add_c_list(self, data):\n    self.c_list.append(data)\n\nprint('出力結果:', end=' ')\nsample1 = Sample()\nsample1.add_c_list('データ1')\n\nsample2 = Sample()\nsample2.add_c_list('データ2')\n\nfor item_data in sample1.c_list:\n  print(item_data, end=' ')",
+    "choices": [
+      {
+        "A": "出力結果:データ1",
+        "B": "出力結果:データ1 データ2",
+        "C": "出力結果:データ2",
+        "D": "出力結果:"
+      }
+    ],
+    "answer": "B",
+    "explanation": "c_listはSampleクラスのクラス変数です。そのため、sample1とsample2が共有しています。sample1にデータ1を追加し、sample2にデータ2を追加した後、sample1.c_listの要素を出力すると、'出力結果:データ1 データ2'となります。"
+  },
+  {
+    "id": 26,
+    "question": "仮想環境にインストールされたすべてのパッケージを表示するpipのオプションを選択肢の中から選んでください。",
+    "choices": [
+      {
+        "A": "pip installs",
+        "B": "pip packages",
+        "C": "pip list",
+        "D": "pip show"
+      }
+    ],
+    "answer": "C",
+    "explanation": "仮想環境にインストールされたすべてのパッケージを表示するためには、'pip list'コマンドを使用します。"
+  },
+  {
+    "id": 27,
+    "question": "Pythonインタプリタにて以下のように入力した場合の出力結果として正しいものを選びなさい。\n\n26 // 8",
+    "choices": [
+      {
+        "A": "3",
+        "B": "3.25",
+        "C": "4",
+        "D": "FALSE"
+      }
+    ],
+    "answer": "A",
+    "explanation": "整数の除算(//)は、除算結果の小数部分を切り捨てます。26を8で割った場合、3.25ですが、整数の除算では小数部分が切り捨てられ、結果は3になります。"
+  },
+  {
+    "id": 28,
+    "question": "Pythonインタプリタにて\n\n>>>nested_list = [7, [4, [3, 1]], 5, [2, 9]]\nと入力した時、1 を出力するための入力として正しいものを選びなさい。",
+    "choices": [
+      {
+        "A": "nested_list[1][1][1]",
+        "B": "nested_list[1][0]",
+        "C": "nested_list[2][0]",
+        "D": "nested_list[0][1][1]"
+      }
+    ],
+    "answer": "A",
+    "explanation": "入力されたリストはネストされたリストです。1 を出力するには、nested_list[1][1][1]を参照する必要があります。これは、nested_listの2番目の要素（[4, [3, 1]]）の2番目の要素（[3, 1]）の2番目の要素（1）を取得します。"
+  },
+  {
+    "id": 29,
+    "question": "以下のプログラムを実行した際の出力結果を選びなさい。\n\nfor i in range(18):\n    if i % 4 == 0:\n        print('{}は4で割り切れます'.format(i), end=' ')\n    elif i > 7 and i % 3 == 0:\n        break\n    else:\n        continue",
+    "choices": [
+      {
+        "A": "0は4で割り切れます 4は4で割り切れます 8は4で割り切れます",
+        "B": "0は4で割り切れます 4は4で割り切れます",
+        "C": "0は4で割り切れます 4は4で割り切れます 8は4で割り切れます 12は4で割り切れます",
+        "D": "0は4で割り切れます 4は4で割り切れます 8は4で割り切れます 12は4で割り切れます 16は4で割り切れます"
+      }
+    ],
+    "answer": "A",
+    "explanation": "プログラムは0から17までの範囲で繰り返し処理を行います。4で割り切れる場合、出力が行われます。また、7より大きく3で割り切れる場合、繰り返し処理が終了します。そのため、出力結果は0は4で割り切れます 4は4で割り切れます 8は4で割り切れますになります。"
+  },
+  {
+    "id": 30,
+    "question": "以下のプログラムを実行した際の出力結果を選びなさい。\n\nprint(range(6))",
+    "choices": [
+      {
+        "A": "[0, 1, 2, 3, 4, 5]",
+        "B": "range(0, 6)",
+        "C": "(0, 6)",
+        "D": "0, 1, 2, 3, 4, 5"
+      }
+    ],
+    "answer": "B",
+    "explanation": "range()関数はrangeオブジェクトを返します。print()関数で出力すると、range(0, 6)が表示されます。"
+  },
+  {
+    "id": 31,
+    "question": "以下のプログラムを実行した際の出力結果を選びなさい。\n\nprint(list(range(6)))",
+    "choices": [
+      {
+        "A": "list(0, 6)",
+        "B": "0, 1, 2, 3, 4, 5, 6",
+        "C": "[0, 1, 2, 3, 4, 5, 6]",
+        "D": "[0, 1, 2, 3, 4, 5]"
+      }
+    ],
+    "answer": "D",
+    "explanation": "range(6)は0から5までの整数を生成します。list()関数でrangeオブジェクトをリストに変換すると、[0, 1, 2, 3, 4, 5]が得られます。"
+  },
+  {
+    "id": 32,
+    "question": "以下のプログラムを実行した際の出力結果を選びなさい。\n\nnum_list = [6, 4, 2, 1, 4, 5, 6, 1]\nnum_list.remove(1)\nprint(num_list)",
+    "choices": [
+      {
+        "A": "[6, 4, 2, 4, 5, 6, 1]",
+        "B": "ValueError:",
+        "C": "[6, 4, 2, 1, 4, 5, 6]",
+        "D": "[6, 4, 2, 4, 5, 6]"
+      }
+    ],
+    "answer": "A",
+    "explanation": "リストのremove()メソッドは、引数で指定した値がリスト内に見つかった場合、最初に見つかった要素を削除します。この場合、最初に見つかった1が削除され、[6, 4, 2, 4, 5, 6, 1]が出力されます。"
+  },
+  {
+    "id": 33,
+    "question": "次のリスト内包表記を実行した際の出力結果を選んでください。",
+    "choices": [
+      {
+        "A": "[(0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 1), (2, 3)]",
+        "B": "[(0, 1), (1, 1), (2, 1), (0, 2), (1, 2), (2, 2), (0, 3), (1, 3), (2, 3)]",
+        "C": "[(0, 1), (0, 2), (0, 3), (1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3)]",
+        "D": "[(0, 1), (2, 1), (0, 2), (1, 2), (0, 3), (1, 3), (2, 3)]"
+      }
+    ],
+    "answer": "A",
+    "explanation": "リスト内包表記を用いてxとyの組み合わせを生成しています。ただし、xとyが異なる場合のみを含んでいます。そのため、正しい出力は選択肢Aになります。"
+  },
+  {
+    "id": 34,
+    "question": "sys.pathの初期化で参照されない要素を、選択肢の中から選んでください。",
+    "choices": [
+      {
+        "A": "インストール時に設定されたデフォルトフォルダ",
+        "B": "PYTHONPATHで指定されたフォルダ",
+        "C": "現在の作業ディレクトリ",
+        "D": "スクリプトが存在するフォルダのシンボリックリンク先"
+      }
+    ],
+    "answer": "D",
+    "explanation": "sys.pathの初期化では、インストール時に設定されたデフォルトフォルダ、PYTHONPATHで指定されたフォルダ、現在の作業ディレクトリが参照されますが、スクリプトが存在するフォルダのシンボリックリンク先は参照されません。正答は選択肢Dです。"
+  },
+  {
+    "id": 35,
+    "question": "次のユーザー定義例外に関して正しいものを選んでください。\n\nclass CustomError(Exception):\n    def __init__(self, data):\n        self.data = data\n    def __str__(self):\n        return repr(self.data)",
+    "choices": [
+      {
+        "A": "このユーザー定義例外は、Exceptionクラスのデフォルトの__init__をオーバーライドしている。",
+        "B": "このユーザー定義例外では.args属性は存在しない。",
+        "C": "このユーザー定義例外を直接プリントしても値は返ってこない。",
+        "D": "このユーザー定義例外の.data属性はタプルである。"
+      }
+    ],
+    "answer": "A",
+    "explanation": "このユーザー定義例外は、Exceptionクラスのデフォルトの__init__メソッドをオーバーライドしています。それ以外の選択肢については正しくありません。.args属性はExceptionクラスに存在するため、このユーザー定義例外でも存在します。また、__str__メソッドが定義されているため、この例外を直接プリントすると値が返ります。.data属性の型は必ずしもタプルではなく、インスタンス化する際に渡される値によります。"
+  },
+  {
+    "id": 36,
+    "question": "次のクラスについて、正しい説明を選択肢から選んでください。\n\nclass Animal:\n    def __init__(self, name):\n        self.name = name\n    def speak(self):\n        return 'I am an animal.'",
+    "choices": [
+      {
+        "A": "このクラスのインスタンスは、speakメソッドを持っていない。",
+        "B": "このクラスは、name属性を持っているが、speakメソッドは持っていない。",
+        "C": "このクラスは、name属性とspeakメソッドを持っている。",
+        "D": "このクラスは、speakメソッドを持っているが、name属性は持っていない。"
+      }
+    ],
+    "answer": "C",
+    "explanation": "このクラスは、name属性とspeakメソッドを持っています。__init__メソッドでname属性が設定され、speakメソッドが定義されています。正答は選択肢Cです。"
+  },
+  {
+    "id": 37,
+    "question": "クラス変数とインスタンス変数の違いについて正しい説明を選択肢から選んでください。",
+    "choices": [
+      {
+        "A": "クラス変数はインスタンス間で共有され、インスタンス変数はインスタンスごとに異なる。",
+        "B": "クラス変数はインスタンスごとに異なり、インスタンス変数はインスタンス間で共有される。",
+        "C": "クラス変数とインスタンス変数は同じであり、インスタンス間で共有される。",
+        "D": "クラス変数とインスタンス変数は同じであり、インスタンスごとに異なる。"
+      }
+    ],
+    "answer": "A",
+    "explanation": "クラス変数はクラスに属しており、インスタンス間で共有されます。一方、インスタンス変数はインスタンスごとに異なります。正答は選択肢Aです。"
+  },
+  {
+    "id": 38,
+    "question": "継承に関する説明のうち、正しいものを選択肢から選んでください。",
+    "choices": [
+      {
+        "A": "継承は、新しいクラスが既存のクラスの属性とメソッドを引き継ぐことでコードの再利用を可能にする。",
+        "B": "継承は、既存のクラスが新しいクラスの属性とメソッドを引き継ぐことでコードの再利用を可能にする。",
+        "C": "継承を使うと、新しいクラスは既存のクラスの属性とメソッドを隠蔽することができる。",
+        "D": "継承を使うと、既存のクラスは新しいクラスの属性とメソッドを上書きすることができる。"
+      }
+    ],
+    "answer": "A",
+    "explanation": "継承は、新しいクラスが既存のクラスの属性とメソッドを引き継ぐことでコードの再利用を可能にする。正答は選択肢Aです。"
+  },
+  {
+    "id": 39,
+    "question": "次のコードについて、正しい説明を選択肢から選んでください。\n\nclass Vehicle:\n    def __init__(self, wheels):\n        self.wheels = wheels\n\nclass Car(Vehicle):\n    def __init__(self, wheels, brand):\n        super().__init__(wheels)\n        self.brand = brand",
+    "choices": [
+      {
+        "A": "CarクラスはVehicleクラスから継承されており、wheels属性とbrand属性を持っている。",
+        "B": "CarクラスはVehicleクラスから継承されており、wheels属性のみを持っている。",
+        "C": "CarクラスはVehicleクラスを継承していないが、wheels属性とbrand属性を持っている。",
+        "D": "CarクラスはVehicleクラスから継承されており、brand属性のみを持っている。"
+      }
+    ],
+    "answer": "A",
+    "explanation": "CarクラスはVehicleクラスから継承されており、wheels属性とbrand属性を持っています。super().__init__(wheels)によって、Vehicleクラスの__init__メソッドが呼び出され、wheels属性が設定されます。その後、brand属性が設定されます。正答は選択肢Aです。"
+  },
+  {
+    "id": 40,
+    "question": "次のコードについて、正しい説明を選択肢から選んでください。\n\nclass Parent:\n    def show(self):\n        print('Parent')\n\nclass Child(Parent):\n    def show(self):\n        print('Child')\n\nobj = Child()\nobj.show()",
+    "choices": [
+      {
+        "A": "このコードはエラーを発生させる。",
+        "B": "このコードは 'Parent' を出力する。",
+        "C": "このコードは 'Child' を出力する。",
+        "D": "このコードは 'Parent' と 'Child' を出力する。"
+      }
+    ],
+    "answer": "C",
+    "explanation": "このコードは 'Child' を出力します。ChildクラスはParentクラスから継承されており、showメソッドをオーバーライドしています。そのため、Childクラスのインスタンスであるobjのshowメソッドが呼び出されたとき、Childクラスのshowメソッドが実行されます。正答は選択肢Cです。"
+  }
+]

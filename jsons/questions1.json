@@ -1,0 +1,563 @@
+[
+  {
+    "id": 1,
+    "question": "以下のfor文を実行した場合の、出力結果を選びなさい。\n\ncities = {'city1': 'Tokyo', 'city2': 'Osaka', 'city3': 'Kyoto'}\n\nprint('出力結果:')\nfor k, v in cities.items():\n    print(v)",
+    "choices": [
+      {
+        "A": "※順不同 出力結果: {'city1', 'Tokyo'} {'city2', 'Osaka'} {'city3', 'Kyoto'}",
+        "B": "※順不同 出力結果: Tokyo Osaka Kyoto",
+        "C": "※順不同 出力結果: city1 city2 city3",
+        "D": "※順不同 出力結果: ('city1', 'Tokyo') ('city2', 'Osaka') ('city3', 'Kyoto')"
+      }
+    ],
+    "answer": "B",
+    "explanation": "このコードは、citiesという辞書の各要素に対して、キーと値をkとvに代入して出力しています。forループ内のprint関数でvが出力されるため、正解は選択肢Bの'Tokyo Osaka Kyoto'です。"
+  },
+  {
+    "id": 2,
+    "question": "次のprint文のうち、「こんにちは！鈴木さん」と出力される記述はどれかを選びなさい。\n\nprint('こんにちは!{}さん', '鈴木')\nprint('こんにちは!()さん', '鈴木')\nprint('こんにちは!{}さん'.format('鈴木'))\nprint('こんにちは!()さん' + '鈴木')",
+    "choices": [
+      {
+        "A": "print('こんにちは!{}さん', '鈴木')",
+        "B": "print('こんにちは!()さん', '鈴木')",
+        "C": "print('こんにちは!{}さん'.format('鈴木'))",
+        "D": "print('こんにちは!()さん' + '鈴木')"
+      }
+    ],
+    "answer": "C",
+    "explanation": "正解は選択肢Cのprint('こんにちは!{}さん'.format('鈴木'))です。formatメソッドを使って文字列内の{}に'鈴木'を代入しています。他の選択肢では正しい文字列フォーマットが使用されていません。"
+  },
+  {
+    "id": 3,
+    "question": "問題文のprint文を実行した場合の、出力結果を選びなさい。\n\nimport math\nprint('出力結果:')\nprint('円周率は%5.3fである。' % math.pi)",
+    "choices": [
+      {
+        "A": "出力結果:円周率は3.142である。",
+        "B": "出力結果:円周率は5.55である。",
+        "C": "出力結果:円周率は3.14である。",
+        "D": "出力結果:円周率は5.142である。"
+      }
+    ],
+    "answer": "A",
+    "explanation": "このコードは、mathモジュールのpi（円周率）を使って、小数点以下3桁まで表示するようにフォーマットされた文字列を出力しています。正解は選択肢Aの'出力結果:円周率は3.142である。'です。"
+  },
+  {
+    "id": 4,
+    "question": "問題文のプログラムを実行した場合の、出力結果を選びなさい。\n\nclass Example:\n\n    lst = []\n\n    def add_e_list(self, data):\n      self.lst.append(data)\n\nprint('出力結果:', end=' ')\nexample1 = Example()\nexample1.add_e_list('データ1')\n\nexample2 = Example()\nexample2.add_e_list('データ2')\n\nfor item_data in example1.lst:\n    print(item_data, end=' ')",
+    "choices": [
+      {
+        "A": "出力結果: データ1 データ2",
+        "B": "出力結果:データ1",
+        "C": "出力結果:",
+        "D": "出力結果:データ2"
+      }
+    ],
+    "answer": "A",
+    "explanation": "このコードでは、Exampleクラスのlstというクラス変数にデータを追加しています。クラス変数はすべてのインスタンスで共有されるため、example1とexample2の両方で追加されたデータが表示されます。正解は選択肢Aの'出力結果: データ1 データ2'です。"
+  },
+  {
+    "id": 5,
+    "question": "正規表現ツールを提供するモジュールを選択肢の中から選びなさい。",
+    "choices": [
+      {
+        "A": "pattern",
+        "B": "re",
+        "C": "regexp",
+        "D": "matcher"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Pythonで正規表現を扱うための標準モジュールは、選択肢Bの're'です。このモジュールを使用することで、正規表現による文字列の検索、置換、分割などが可能になります。"
+  },
+  {
+    "id": 6,
+    "question": "コマンドライン引数を取得するためのモジュールを選択肢の中から選びなさい。",
+    "choices": [
+      {
+        "A": "glob",
+        "B": "os",
+        "C": "arg",
+        "D": "sys"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Pythonでコマンドライン引数を取得するための標準モジュールは、選択肢Dの'sys'です。sysモジュールのargv属性を使用することで、コマンドライン引数をリストとして取得することができます。"
+  },
+  {
+    "id": 7,
+    "question": "バイナリデータレコードの処理を行うモジュールを選択肢の中から選びなさい。",
+    "choices": [
+      {
+        "A": "binary",
+        "B": "bin",
+        "C": "data",
+        "D": "struct"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Pythonでバイナリデータレコードの処理を行うための標準モジュールは、選択肢Dの'struct'です。structモジュールは、Pythonのデータ型とC言語のデータ型との間での変換を行う機能を提供しています。これにより、バイナリデータの読み書きが容易になります。"
+  },
+  {
+    "id": 8,
+    "question": "Pythonの対話型インタプリタの中で存在するものを選択肢の中から選びなさい。",
+    "choices": [
+      {
+        "A": "PythonI",
+        "B": "ZPython",
+        "C": "IPython",
+        "D": "JpythonF"
+      }
+    ],
+    "answer": "C",
+    "explanation": "選択肢Cの'IPython'は、Pythonの対話型インタプリタの一つです。IPythonは、標準のPythonインタプリタよりも高機能で使いやすいとされており、履歴機能や自動補完などの便利な機能が搭載されています。"
+  },
+  {
+    "id": 9,
+    "question": "以下のプログラムを実行した際の出力結果を選びなさい。\n\ndef hoge(title, content = 'default_content', number = 4):\n    content = 'content'\n    print(title, end=' ')\n    print(content, end=' ')\n    print(number)\n\nhoge(title = 'title_default', content = 'None', number = 5) ",
+    "choices": [
+      {
+        "A": "title_default  content  5",
+        "B": "title_default  default_content  4",
+        "C": "TypeError",
+        "D": "title_default  content  4"
+      }
+    ],
+    "answer": "A",
+    "explanation": "このコードでは、hoge関数が実行され、引数titleに'title_default'、引数contentに'None'、引数numberに5が渡されます。しかし、関数内でcontent変数の値は 'content' に上書きされています。関数内のprint文により、出力結果は 'title_default content 5' となります。"
+  },
+  {
+    "id": 10,
+    "question": "pythonインタプリタを終了するコマンドを、選択肢の中から選びなさい。",
+    "choices": [
+      {
+        "A": "quit()",
+        "B": "q",
+        "C": "end()",
+        "D": "kill()"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Pythonインタプリタを終了するためのコマンドは、選択肢Aの'quit()'です。ただし、Pythonインタプリタを終了するためには、他にも 'exit()' や 'Ctrl + D' (Unix系OSの場合)、'Ctrl + Z' および 'Enter' (Windowsの場合) を使用することもできます。"
+  },
+  {
+    "id": 11,
+    "question": "以下のプログラムを実行した際の出力結果を選びなさい。\n\nprint(list(range(3, 8)))",
+    "choices": [
+      {
+        "A": "range(3, 8)",
+        "B": "[3, 4, 5, 6, 7]",
+        "C": "(3,8)",
+        "D": "3,4,5,6,7"
+      }
+    ],
+    "answer": "B",
+    "explanation": "このコードでは、range(3, 8)がlist関数でリストに変換されてからprint文で出力されます。range関数は、指定された範囲の連続した整数を生成するオブジェクトを返します。この場合、出力結果は '[3, 4, 5, 6, 7]' となります。"
+  },
+  {
+    "id": 12,
+    "question": "以下のプログラムを実行した際の出力結果を選びなさい。\n\narr = [7, 2, 5, 1, 5, 6, 7, 1]\narr.remove(1)\nprint(arr)",
+    "choices": [
+      {
+        "A": "[7, 2, 5, 5, 6, 7, 1]",
+        "B": "ValueError:",
+        "C": "[7, 2, 5, 5, 6, 7]",
+        "D": "[7, 2, 5, 1, 5, 6, 7]"
+      }
+    ],
+    "answer": "A",
+    "explanation": "このコードでは、リスト内の最初の1がremoveメソッドによって削除されます。そのため、出力結果は '[7, 2, 5, 5, 6, 7, 1]' となります。"
+  },
+  {
+    "id": 13,
+    "question": "以下のプログラムを実行した際の出力結果を選びなさい。\n\nnumbers = [3, 5, 7, 5, 5, 3, 7]\nfor i in range(numbers.count(5)):\n    print(i, end=' ')",
+    "choices": [
+      {
+        "A": "0 1 2 3",
+        "B": "5 5 5",
+        "C": "0 1 2",
+        "D": "1 2 3"
+      }
+    ],
+    "answer": "C",
+    "explanation": "このコードでは、numbers.count(5)の結果は3であり、range(3)が生成されます。forループでは、0から2までの整数が順番に出力されます。そのため、出力結果は '0 1 2' となります。"
+  },
+  {
+    "id": 14,
+    "question": "以下のプログラムをインタプリタにて実行した際の出力結果を選びなさい。\n\n[(x, y) for x in [0,1,3] for y in [1,3,4] if x != y]",
+    "choices": [
+      {
+        "A": "[(0, 1), (0, 3), (0, 4), (1, 3), (1, 4), (3, 1), (3, 4)]",
+        "B": "[(0, 1), (0, 3), (0, 4), (1, 1), (1, 3), (1, 4), (3, 1), (3, 3), (3, 4)]",
+        "C": "[(0, 1), (1, 1), (3, 1), (0, 3), (1, 3), (3, 3), (0, 4), (1, 4), (3, 4)]",
+        "D": "[(0, 1), (3, 1), (0, 3), (1, 3), (0, 4), (1, 4), (3, 4)]"
+      }
+    ],
+    "answer": "A",
+    "explanation": "このリスト内包表記では、xとyの組み合わせが生成されますが、xとyが等しくない場合のみその組み合わせがリストに追加されます。そのため、出力結果は '[(0, 1), (0, 3), (0, 4), (1, 3), (1, 4), (3, 1), (3, 4)]' となります。"
+  },
+  {
+    "id": 15,
+    "question": "以下のプログラムを実行した際の出力結果を選びなさい。\n\nx = ['a','b','c','d','f']\nprint(x[:-4])",
+    "choices": [
+      {
+        "A": "IndexError: list index out of range",
+        "B": "['a']",
+        "C": "['c', 'd', 'f']",
+        "D": "['d', 'f']"
+      }
+    ],
+    "answer": "B",
+    "explanation": "このコードでは、リストのスライスを利用して、最後から4番目までの要素を除いた部分が出力されます。そのため、出力結果は '['a']' となります。"
+  },
+  {
+    "id": 16,
+    "question": "以下のプログラムを実行した際と等価の記述を選択肢の中から選びなさい。\n\nt = 124,346,'text'",
+    "choices": [
+      {
+        "A": "t = [124,346,'text']",
+        "B": "t = (124,346,'text')",
+        "C": "t = <124,346,'text'>",
+        "D": "t = {124,346,'text'"
+      }
+    ],
+    "answer": "B",
+    "explanation": "このコードでは、タプルを暗黙的に定義しています。そのため、等価な記述は 't = (124,346,'text')' となります。"
+  },
+  {
+    "id": 17,
+    "question": "コンパイル済Pythonファイルの拡張子を、選択肢の中から選びなさい。",
+    "choices": [
+      {
+        "A": "pyc",
+        "B": "class",
+        "C": "py",
+        "D": "cl"
+      }
+    ],
+    "answer": "A",
+    "explanation": "コンパイル済Pythonファイルの拡張子は '.pyc' です。"
+  },
+  {
+    "id": 18,
+    "question": "ファイルの読み書きで使用する「open」関数のモードについて、存在しないものを選択肢の中から選びなさい。",
+    "choices": [
+      {
+        "A": "w",
+        "B": "r+",
+        "C": "a",
+        "D": "r-"
+      }
+    ],
+    "answer": "D",
+    "explanation": "ファイルの読み書きで使用する「open」関数のモードには、'w' (書き込みモード)、'r+' (読み書きモード)、'a' (追記モード) がありますが、'r-' は存在しません。"
+  },
+  {
+    "id": 19,
+    "question": "以下のプログラムを実行した際の出力結果を選びなさい。\n\nimport json\nx = {'name':'suzuki','data':[3,4,5]}\nprint(json.dumps(x))",
+    "choices": [
+      {
+        "A": "{\"name\": \"suzuki\", \"data\": [\"3\", \"4\", \"5\"]}",
+        "B": "{\"name\": \"suzuki\", \"data\": [3, 4, 5]}",
+        "C": "{\"name\":suzuki, \"data\": [3, 4, 5]}",
+        "D": "{\"name\": \"suzuki\", \"data\": \"[3, 4, 5]\"}"
+      }
+    ],
+    "answer": "B",
+    "explanation": "このコードでは、辞書をJSON文字列に変換して出力しています。そのため、出力結果は '\"{\"name\": \"suzuki\", \"data\": [3, 4, 5]}\"' となります。"
+  },
+  {
+    "id": 20,
+    "question": "以下のプログラムを実行した際に出力される例外の型を選びなさい。\n\nx = 100/0",
+    "choices": [
+      {
+        "A": "ValueError",
+        "B": "ArithmeticError",
+        "C": "ZeroDivisionError",
+        "D": "RuntimeError"
+      }
+    ],
+    "answer": "C",
+    "explanation": "このコードでは、0で割り算を行っているため、'ZeroDivisionError' が発生します。"
+  },
+  {
+    "id": 21,
+    "question": "次のプログラムを実行した際の出力結果を選びなさい。\n\np = 'python'\n\np + 'rules'\n\nprint(p)",
+    "choices": [
+      {
+        "A": "pythonrules",
+        "B": "rulespython",
+        "C": "python",
+        "D": "prules"
+      }
+    ],
+    "answer": "C",
+    "explanation": "文字列pに'rules'を追加しても、変数p自体は変更されません。よって、出力結果は'python'です。"
+  },
+  {
+    "id": 22,
+    "question": "次のプログラムを実行した際の出力結果として正しいものを選択しなさい。\n\nmatrix = [[2, 4, 6, 8, 10],\n          [12, 14, 16, 18, 20]]\n\ncollected = [row[1] for row in matrix]\n\nprint(collected)",
+    "choices": [
+      {
+        "A": "[4, 14]",
+        "B": "[2, 4, 6, 8, 10]",
+        "C": "[12, 14, 16, 18, 20]",
+        "D": "[6, 16]"
+      }
+    ],
+    "answer": "A",
+    "explanation": "リスト内包表記を使用して、各行のインデックス1の要素をcollectedに格納します。そのため、出力結果は[4, 14]になります。"
+  },
+  {
+    "id": 23,
+    "question": "次のプログラムを実行した際の出力結果として正しいものを選択しなさい。\n\nvocab = 'exploration'\n\nprint(vocab[2:11:3])",
+    "choices": [
+      {
+        "A": "prt",
+        "B": "po",
+        "C": "epr",
+        "D": "prtt"
+      }
+    ],
+    "answer": "A",
+    "explanation": "スライスを使って、インデックス2から10までの要素を3つおきに取得します。そのため、出力結果は'prt'になります。"
+  },
+  {
+    "id": 24,
+    "question": "次のプログラムを実行した際の出力結果として正しいものを選択しなさい。\n\nswimmer = [s * 2 for s in 'swimmer']\n\nprint(swimmer)",
+    "choices": [
+      {
+        "A": "['ss', 'ww', 'ii', 'mm', 'mm', 'ee', 'rr']",
+        "B": "['swimmer', 'swimmer', 'swimmer', 'swimmer', 'swimmer']",
+        "C": "SyntaxErrorとなる。",
+        "D": "['swimmer', 'swimmer']"
+      }
+    ],
+    "answer": "A",
+    "explanation": "リスト内包表記を使用して、文字列'swimmer'の各文字を2倍にしてリストに格納します。そのため、出力結果は['ss', 'ww', 'ii', 'mm', 'mm', 'ee', 'rr']になります。"
+  },
+  {
+    "id": 25,
+    "question": "次のプログラムを実行した際の出力結果として正しいものを選択しなさい。\n\nj = 15\n\ndef num(arg=j):\n    print(arg)\n\nj = 9\n\nnum()",
+    "choices": [
+      {
+        "A": "9",
+        "B": "15",
+        "C": "24",
+        "D": "SyntaxErrorとなる。"
+      }
+    ],
+    "answer": "B",
+    "explanation": "関数numのデフォルト引数argは、関数定義時にjの値（15）が代入されます。その後、jの値を9に変更しても、関数numのデフォルト引数argの値は変わりません。よって、出力結果は15です。"
+  },
+  {
+    "id": 26,
+    "question": "プログラムを実行し、下記の実行結果を得たい。\n\n['Sato']\n['Sato', 'Suzuki']\n['Sato', 'Suzuki', 'Takahashi']\n下記のプログラムの(A)に記述すべきコードを選択肢から選びなさい。\ndef explore_programming(instructor, students=[]):\n    (A)\n    return students\n\nprint(explore_programming('Sato'))\nprint(explore_programming('Suzuki'))\nprint(explore_programming('Takahashi'))",
+
+    "choices": [
+      {
+        "A": "students.append(instructor)",
+        "B": "students.extend(instructor)",
+        "C": "students.insert(instructor)",
+        "D": "students.copy(instructor)"
+      }
+    ],
+    "answer": "A",
+    "explanation": "選択肢Aの`students.append(instructor)`は、引数で受け取ったinstructorをリストLの末尾に追加します。このコードを使うと、期待される実行結果を得ることができます。選択肢Bの`students.extend(instructor)`は、引数で受け取ったinstructorの各要素をリストLに追加しますが、この問題ではinstructorは文字列なので適切ではありません。選択肢Cの`students.insert(instructor)`は、リストLにinstructorを追加するための正しい位置を指定していないため、エラーとなります。選択肢Dの`students.copy(instructor)`は、リストLにinstructorをコピーすることができません。正しいコードは選択肢Aの`students.append(instructor)`です。"
+  },
+  {
+    "id": 27,
+    "question": "以下のプログラムを実行した際の出力結果として正しいものを選択しなさい。\n\nprogramming_school = [(1, 'Sato'), (2, 'Suzuki'), (3, 'Tanaka'), (4, 'Yamada')]\nps = programming_school\nps.sort(key=lambda ps: ps[1])\n\nprint(ps)",
+    "choices": [
+      {
+        "A": "[(4, 'Yamada'), (2, 'Suzuki'), (3, 'Tanaka'), (1, 'Sato')]",
+        "B": "[(4, 'Yamada'), (3, 'Tanaka'), (2, 'Suzuki'), (1, 'Sato')]",
+        "C": "[(4, 'Yamada'), (1, 'Sato'), (2, 'Suzuki'), (3, 'Tanaka')]",
+        "D": "[(4, 'Yamada'), (1, 'Sato'), (3, 'Tanaka'), (2, 'Suzuki')]"
+      }
+    ],
+    "answer": "D",
+    "explanation": "プログラムでは、リスト`programming_school`に格納されたタプルのリストを作成し、そのリストを`ps`に代入しています。`ps.sort(key=lambda ps: ps[1])`によって、リスト`ps`の要素が第二要素(名前)で昇順に並び替えられます。出力結果は選択肢Dの`[(4, 'Yamada'), (1, 'Sato'), (3, 'Tanaka'), (2, 'Suzuki')]`です。"
+  },
+  {
+    "id": 28,
+    "question": "以下のプログラムを実行した際の出力結果として正しいものを選択しなさい。\n\ndef programming_school(teacher, *mentor):\n    print(teacher)\n\nprogramming_school('Sato', 'Suzuki', 'Tanaka')",
+    "choices": [
+      {
+        "A": "('Sato', 'Suzuki', 'Tanaka')",
+        "B": "('Sato', 'Suzuki')",
+        "C": "Errorとなる。",
+        "D": "Sato"
+      }
+    ],
+    "answer": "D",
+    "explanation": "関数`programming_school`は引数`teacher`と可変長引数`*mentor`を受け取ります。この関数は引数`teacher`の値を出力します。`programming_school('Sato', 'Suzuki', 'Tanaka')`を呼び出すと、引数`teacher`に'Sato'が渡され、`*mentor`に'Suzuki'と'Tanaka'が渡されます。関数は`teacher`の値'Sato'を出力するので、選択肢Dが正解です。"
+  },
+  {
+    "id": 29,
+    "question": "Pythonの関数について正しいものを選択肢から選びなさい。",
+    "choices": [
+      {
+        "A": "関数をコールするときは、必ず位置引数が先でキーワード引数を後にしなければならない。",
+        "B": "関数をコールするときは、必ずキーワード引数が先で位置引数を後にしなければならない。",
+        "C": "キーワード引数は全て関数定義の仮引数に書いたものと一致している必要があり、順序も仮引数に書いた順である必要がある。",
+        "D": "キーワード引数は全て関数定義の仮引数に書いたものと一致している必要はない。"
+      }
+    ],
+    "answer": "A",
+    "explanation": "関数を呼び出す際には、位置引数が先でキーワード引数が後に指定されなければなりません。キーワード引数は、関数定義の仮引数に書かれたものと一致する必要はありませんが、関数内で使用される変数名として有効である必要があります。したがって、選択肢Aが正しいです。"
+  },
+  {
+    "id": 30,
+    "question": "以下のプログラムを実行した際の出力結果として正しいものを選択しなさい。\n\nmembers = {1: 'Sato', 2: 'Suzuki', 3: 'Tanaka'}\nmembers[4] = 'Yamada'\ndel members[3]\nprint(list(members.keys()))",
+    "choices": [
+      {
+        "A": "['Sato', 'Suzuki', 'Yamada']",
+        "B": "[1, 2, 3]",
+        "C": "[1, 2, 4]",
+        "D": "Errorとなる。"
+      }
+    ],
+    "answer": "C",
+    "explanation": "プログラムでは、membersという名前の辞書が作成され、members[4] = 'Yamada'でキー4に'Yamada'が追加されます。次に、del members[3]でキー3の要素が削除されます。最後に、print(list(members.keys()))で辞書のキーのリストが出力されます。選択肢Cの[1, 2, 4]が正解です。"
+  },
+  {
+    "id": 31,
+    "question": "以下のプログラムと同じ出力結果を得たい。\n\ncoding_school = ['Sato', 'Suzuki', 'Tanaka', 'Watanabe', 'Ito', 'Yamada']\ncoding_school.clear()\nprint(coding_school)\n下記のプログラムの(A)に記述すべきコードを選択肢から選びなさい。",
+    "choices": [
+      {
+        "A": "delete coding_school()",
+        "B": "del coding_school[:]",
+        "C": "del coding_school()",
+        "D": "delete coding_school[:]"
+      }
+    ],
+    "answer": "B",
+    "explanation": "リストの要素をすべて削除するために、del coding_school[:]を使ってリストの全範囲を指定します。選択肢Bが正しいです。"
+  },
+  {
+    "id": 32,
+    "question": "プログラムを実行し、下記の実行結果を得たい。\n\nWatanabe\n下記のプログラムの(A)に記述すべきコードを選択肢から選びなさい。\n\ncoding_school = ['Sato', 'Suzuki', 'Tanaka', 'Watanabe', 'Ito', 'Yamada']\n\n(A)\n\nprint(ex_student)",
+    "choices": [
+      {
+        "A": "ex_student = coding_school.clear(3)",
+        "B": "ex_student = coding_school.destroy(3)",
+        "C": "ex_student = coding_school.remove(3)",
+        "D": "ex_student = coding_school.pop(3)"
+      }
+    ],
+    "answer": "D",
+    "explanation": "リストからインデックスで指定した要素を削除し、その要素を返すにはpop()メソッドを使用します。選択肢Dのex_student = coding_school.pop(3)が正しいです。"
+  },
+  {
+    "id": 33,
+    "question": "プログラムを実行し、下記の実行結果を得たい。\n\n下記のプログラムの(A)及び(B)に記述すべきコードの組み合わせを選択肢から選びなさい。\nfrom (A) import (B)\n\nnow = date.today()\n\nprint(now)",
+    "choices": [
+      {
+        "A": "(A) date (B) datetime",
+        "B": "(A) datetime (B) date",
+        "C": "(A) datetime (B) datetime",
+        "D": "(A) date (B) date"
+      }
+    ],
+    "answer": "B",
+    "explanation": "dateクラスはdatetimeモジュールに含まれており、from datetime import dateを使用してインポートできます。したがって、選択肢Bが正しいです。"
+  },
+  {
+    "id": 34,
+    "question": "Pythonインタプリタにて以下のように入力した場合の出力結果として正しいものを選びなさい。\n\n>>> import math\n>>> math.sqrt(64)",
+    "choices": [
+      {
+        "A": "SyntaxErrorとなる。",
+        "B": "TypeErrorとなる。",
+        "C": "8.0",
+        "D": "64"
+      }
+    ],
+    "answer": "C",
+    "explanation": "math.sqrt(x)関数は引数xの平方根を返します。この例では、引数として64が与えられており、その平方根は8.0になります。従って、正しい出力結果は8.0です。"
+  },
+  {
+    "id": 35,
+    "question": "Pythonインタプリタにて以下のように入力した場合の出力結果として正しいものを選びなさい。\n\n>>> import random\n>>> random.sample(range(50), 3)",
+    "choices": [
+      {
+        "A": "[-23, 15, 7]",
+        "B": "[25, 8, 42]",
+        "C": "[50, 50, 50]",
+        "D": "[18.5, 4, 31]"
+      }
+    ],
+    "answer": "B",
+    "explanation": "random.sample(population, k)関数は、指定された集団populationからk個の要素をランダムに選んで返します。この例では、0から49までの範囲から3つの数値がランダムに選ばれます。選択肢Bにあるような数値の組み合わせが正しい出力結果です。"
+  },
+  {
+    "id": 36,
+    "question": "下記のプログラムの(A)に記述すべきコードを選択肢から選びなさい。\n\nclass ProgrammingSchool:\n def __init__(self, teacher, mentor):\n self.teacher = teacher\n self.mentor = mentor\n\n(A)\nprint(ps.teacher)\nprint(ps.mentor)",
+    "choices": [
+      {
+        "A": "ps = ProgrammingSchool('Yamada', 'Suzuki')",
+        "B": "ps = new.ProgrammingSchool('Yamada', 'Suzuki')",
+        "C": "ps = ProgrammingSchool.new('Yamada', 'Suzuki')",
+        "D": "ps = ProgrammingSchool new('Yamada', 'Suzuki')"
+      }
+    ],
+    "answer": "A",
+    "explanation": "クラスProgrammingSchoolのインスタンスを作成するには、選択肢Aのようにps = ProgrammingSchool('Yamada', 'Suzuki')と記述します。これにより、teacherには'Yamada'が、mentorには'Suzuki'が割り当てられます。"
+  },
+  {
+    "id": 37,
+    "question": "Pythonインタプリタにて以下のように入力した場合の出力結果として正しいものを選びなさい。\n\n>>> import reprlib\n>>> reprlib.repr(set('programming'))",
+    "choices": [
+      {
+        "A": "{'a', 'g', 'm', 'p', ...}",
+        "B": "Syntax Errorとなる。",
+        "C": "{'m', 'o', 'p', 'r', ...}",
+        "D": "{'a', 'g', 'm', 'o', ...}"
+      }
+    ],
+    "answer": "A",
+    "explanation": "reprlib.repr(obj)関数は、オブジェクトobjの短縮表示形式の文字列を返します。この例では、set('programming')により、重複しない文字の集合が作成され、reprlib.repr()によってその短縮表示が得られます。従って、正しい出力結果は選択肢Aの\"{'a', 'g', 'm', 'p', ...}\"です。"
+  },
+  {
+    "id": 38,
+    "question": "以下のプログラムを実行した際の出力結果を選びなさい。\n\na = 2\nb = 5\n\nc = 3.0 + b, 4 * a\n\nprint(c)",
+    "choices": [
+      {
+        "A": "SyntaxErrorとなる。",
+        "B": "[7.0, 8]",
+        "C": "TypeErrorとなる。",
+        "D": "(7.0, 8)"
+      }
+    ],
+    "answer": "D",
+    "explanation": "このプログラムでは、cには3.0 + bと4 * aの計算結果がタプルとして格納されます。3.0 + bは3.0 + 5で7.0、4 * aは4 * 2で8になります。従って、cは(7.0, 8)となり、正しい出力結果は選択肢Dです。"
+  },
+  {
+    "id": 39,
+    "question": "以下のプログラムを実行した際の出力結果を選びなさい。\n\nprint(4 ** 2 + 5)",
+    "choices": [
+      {
+        "A": "21",
+        "B": "16",
+        "C": "23",
+        "D": "11"
+      }
+    ],
+    "answer": "C",
+    "explanation": "このプログラムでは、4 ** 2 + 5という式が計算されます。4 ** 2は4の2乗で16、16 + 5は21になります。従って、正しい出力結果は選択肢Cの23です。"
+  },
+  {
+    "id": 40,
+    "question": "次のコードについて、正しい説明を選択肢から選んでください。\n\nclass Animal:\n    def __init__(self, name):\n        self.name = name\n\nclass Dog(Animal):\n    def bark(self):\n        print('Woof!')\n\nmy_dog = Dog('Max')\nprint(my_dog.name)",
+    "choices": [
+      {
+        "A": "このコードはエラーを発生させる。",
+        "B": "このコードは 'Woof!' を出力する。",
+        "C": "このコードは 'Max' を出力する。",
+        "D": "このコードは何も出力しない。"
+      }
+    ],
+    "answer": "C",
+    "explanation": "このコードは 'Max' を出力します。DogクラスはAnimalクラスから継承されており、Animalクラスの__init__メソッドによってname属性が設定されます。そのため、my_dogオブジェクトのname属性は'Max'になり、print(my_dog.name)によって'Max'が出力されます。正答は選択肢Cです。"
+  }
+]
