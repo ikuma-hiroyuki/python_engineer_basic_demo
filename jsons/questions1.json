@@ -1,13 +1,13 @@
 [
   {
     "id": 1,
-    "question": "以下のfor文を実行した場合の、出力結果を選びなさい。\n\ncities = {'city1': 'Tokyo', 'city2': 'Osaka', 'city3': 'Kyoto'}\n\nprint('出力結果:')\nfor k, v in cities.items():\n    print(v)",
+    "question": "以下のfor文を実行した場合の、出力結果を選びなさい。\n\ncities = {'city1': 'Tokyo', 'city2': 'Osaka', 'city3': 'Kyoto'}\n\nprint('出力結果: ', end='')\nfor k, v in cities.items():\n    print(v, end=' ')",
     "choices": [
       {
-        "A": "※順不同 出力結果: {'city1', 'Tokyo'} {'city2', 'Osaka'} {'city3', 'Kyoto'}",
-        "B": "※順不同 出力結果: Tokyo Osaka Kyoto",
-        "C": "※順不同 出力結果: city1 city2 city3",
-        "D": "※順不同 出力結果: ('city1', 'Tokyo') ('city2', 'Osaka') ('city3', 'Kyoto')"
+        "A": "出力結果: {'city1', 'Tokyo'} {'city2', 'Osaka'} {'city3', 'Kyoto'}",
+        "B": "出力結果: Tokyo Osaka Kyoto",
+        "C": "出力結果: city1 city2 city3",
+        "D": "出力結果: ('city1', 'Tokyo') ('city2', 'Osaka') ('city3', 'Kyoto')"
       }
     ],
     "answer": "B",
@@ -15,7 +15,7 @@
   },
   {
     "id": 2,
-    "question": "次のprint文のうち、「こんにちは！鈴木さん」と出力される記述はどれかを選びなさい。",
+    "question": "次のprint文のうち、「こんにちは！鈴木さん」と出力される記述はどれかを選びなさい。\n\nprint('こんにちは!{}さん', '鈴木')\nprint('こんにちは!()さん', '鈴木')\nprint('こんにちは!{}さん'.format('鈴木'))\nprint('こんにちは!()さん' + '鈴木')",
     "choices": [
       {
         "A": "print('こんにちは!{}さん', '鈴木')",
@@ -207,7 +207,7 @@
       }
     ],
     "answer": "B",
-    "explanation": "このコードでは、リストのスライスを利用して、最後から4番目までの要素を除いた部分が出力されます。そのため、出力結果は '['a']' となります。"
+    "explanation": "このコードでは、リストのスライスを利用して、後ろから4番目の要素が出力されます。そのため、出力結果は '['a']' となります。"
   },
   {
     "id": 16,
@@ -312,14 +312,14 @@
     "question": "次のプログラムを実行した際の出力結果として正しいものを選択しなさい。\n\nvocab = 'exploration'\n\nprint(vocab[2:11:3])",
     "choices": [
       {
-        "A": "prt",
+        "A": "pri",
         "B": "po",
         "C": "epr",
         "D": "prtt"
       }
     ],
     "answer": "A",
-    "explanation": "スライスを使って、インデックス2から10までの要素を3つおきに取得します。そのため、出力結果は'prt'になります。"
+    "explanation": "スライスを使って、インデックス2から10までの要素を3つおきに取得します。そのため、出力結果は'pri'になります。"
   },
   {
     "id": 24,
@@ -351,7 +351,7 @@
   },
   {
     "id": 26,
-    "question": "プログラムを実行し、下記の実行結果を得たい。\n\n['Sato']\n['Sato', 'Suzuki']\n['Sato', 'Suzuki', 'Takahashi']\n下記のプログラムの(A)に記述すべきコードを選択肢から選びなさい。\ndef explore_programming(instructor, students=[]):\n    (A)\n    return students\n\nprint(explore_programming('Sato'))\nprint(explore_programming('Suzuki'))\nprint(explore_programming('Takahashi'))",
+    "question": "プログラムを実行し、下記の実行結果を得たい。\n\n['Sato']\n['Sato', 'Suzuki']\n['Sato', 'Suzuki', 'Takahashi']\n\n下記のプログラムの(A)に記述すべきコードを選択肢から選びなさい。\ndef explore_programming(instructor, students=[]):\n    (A)\n    return students\n\nprint(explore_programming('Sato'))\nprint(explore_programming('Suzuki'))\nprint(explore_programming('Takahashi'))",
 
     "choices": [
       {
@@ -366,7 +366,7 @@
   },
   {
     "id": 27,
-    "question": "以下のプログラムを実行した際の出力結果として正しいものを選択しなさい。\n\nprogramming_school = [(1, 'Sato'), (2, 'Suzuki'), (3, 'Tanaka'), (4, 'Yamada')]\nps = programming_school\nps.sort(key=lambda ps: ps[1])\n\nprint(ps)",
+    "question": "以下のプログラムを実行した際の出力結果として正しいものを選択しなさい。\n\nprogramming_school = [(1, 'Sato'), (2, 'Suzuki'), (3, 'Tanaka'), (4, 'Yamada')]\nps = programming_school\nps.sort(key=lambda ps: ps[1], reverse=True)\n\nprint(ps)",
     "choices": [
       {
         "A": "[(4, 'Yamada'), (2, 'Suzuki'), (3, 'Tanaka'), (1, 'Sato')]",
@@ -375,8 +375,8 @@
         "D": "[(4, 'Yamada'), (1, 'Sato'), (3, 'Tanaka'), (2, 'Suzuki')]"
       }
     ],
-    "answer": "D",
-    "explanation": "プログラムでは、リスト`programming_school`に格納されたタプルのリストを作成し、そのリストを`ps`に代入しています。`ps.sort(key=lambda ps: ps[1])`によって、リスト`ps`の要素が第二要素(名前)で昇順に並び替えられます。出力結果は選択肢Dの`[(4, 'Yamada'), (1, 'Sato'), (3, 'Tanaka'), (2, 'Suzuki')]`です。"
+    "answer": "B",
+    "explanation": "プログラムでは、リスト`programming_school`に格納されたタプルのリストを作成し、そのリストを`ps`に代入しています。`ps.sort(key=lambda ps: ps[1], reverse=True)`によって、リスト`ps`の要素が第二要素(名前)で降順に並び替えられます。出力結果は選択肢Dの`[(4, 'Yamada'), (3, 'Tanaka'), (2, 'Suzuki'), (1, 'Sato')]`です。"
   },
   {
     "id": 28,
@@ -399,7 +399,7 @@
       {
         "A": "関数をコールするときは、必ず位置引数が先でキーワード引数を後にしなければならない。",
         "B": "関数をコールするときは、必ずキーワード引数が先で位置引数を後にしなければならない。",
-        "C": "キーワード引数は全て関数定義の仮引数に書いたものと一致している必要があり、順序も仮引数に書いた順である必要がある。",
+        "C": "キーワード引数の順序は仮引数に書いた順である必要がある。",
         "D": "キーワード引数は全て関数定義の仮引数に書いたものと一致している必要はない。"
       }
     ],
@@ -422,7 +422,7 @@
   },
   {
     "id": 31,
-    "question": "以下のプログラムと同じ出力結果を得たい。\n\ncoding_school = ['Sato', 'Suzuki', 'Tanaka', 'Watanabe', 'Ito', 'Yamada']\ncoding_school.clear()\nprint(coding_school)\n下記のプログラムの(A)に記述すべきコードを選択肢から選びなさい。",
+    "question": "以下のプログラムと同じ出力結果を得たい。\n\ncoding_school = ['Sato', 'Suzuki', 'Tanaka', 'Watanabe', 'Ito', 'Yamada']\ncoding_school.clear()\nprint(coding_school)\n\n下記のプログラムの(A)に記述すべきコードを選択肢から選びなさい。\ncoding_school = ['Sato', 'Suzuki', 'Tanaka', 'Watanabe', 'Ito', 'Yamada']\n(A)\nprint(coding_school)",
     "choices": [
       {
         "A": "delete coding_school()",
@@ -436,7 +436,7 @@
   },
   {
     "id": 32,
-    "question": "プログラムを実行し、下記の実行結果を得たい。\n\nWatanabe\n下記のプログラムの(A)に記述すべきコードを選択肢から選びなさい。\n\ncoding_school = ['Sato', 'Suzuki', 'Tanaka', 'Watanabe', 'Ito', 'Yamada']\n\n(A)\n\nprint(ex_student)",
+    "question": "プログラムを実行し、下記の実行結果を得たい。\n\nWatanabe\n\n下記のプログラムの(A)に記述すべきコードを選択肢から選びなさい。\n\ncoding_school = ['Sato', 'Suzuki', 'Tanaka', 'Watanabe', 'Ito', 'Yamada']\n\n(A)\n\nprint(ex_student)",
     "choices": [
       {
         "A": "ex_student = coding_school.clear(3)",
@@ -509,14 +509,14 @@
     "question": "Pythonインタプリタにて以下のように入力した場合の出力結果として正しいものを選びなさい。\n\n>>> import reprlib\n>>> reprlib.repr(set('programming'))",
     "choices": [
       {
-        "A": "{'a', 'g', 'm', 'p', ...}",
+        "A": "{'a', 'g', 'i', 'm', 'n', 'o', ...}",
         "B": "Syntax Errorとなる。",
         "C": "{'m', 'o', 'p', 'r', ...}",
         "D": "{'a', 'g', 'm', 'o', ...}"
       }
     ],
     "answer": "A",
-    "explanation": "reprlib.repr(obj)関数は、オブジェクトobjの短縮表示形式の文字列を返します。この例では、set('programming')により、重複しない文字の集合が作成され、reprlib.repr()によってその短縮表示が得られます。従って、正しい出力結果は選択肢Aの\"{'a', 'g', 'm', 'p', ...}\"です。"
+    "explanation": "reprlib.repr(obj)関数は、オブジェクトobjの短縮表示形式の文字列を返します。この例では、set('programming')により、重複しない文字の集合が作成され、reprlib.repr()によってその短縮表示が得られます。従って、正しい出力結果は選択肢Aの\"{'a', 'g', 'i', 'm', 'n', 'o', ...}\"です。"
   },
   {
     "id": 38,
@@ -526,11 +526,11 @@
         "A": "SyntaxErrorとなる。",
         "B": "[7.0, 8]",
         "C": "TypeErrorとなる。",
-        "D": "(7.0, 8)"
+        "D": "(8.0, 8)"
       }
     ],
     "answer": "D",
-    "explanation": "このプログラムでは、cには3.0 + bと4 * aの計算結果がタプルとして格納されます。3.0 + bは3.0 + 5で7.0、4 * aは4 * 2で8になります。従って、cは(7.0, 8)となり、正しい出力結果は選択肢Dです。"
+    "explanation": "このプログラムでは、cには3.0 + bと4 * aの計算結果がタプルとして格納されます。3.0 + bは3.0 + 5で8.0、4 * aは4 * 2で8になります。従って、cは(8.0, 8)となり、正しい出力結果は選択肢Dです。"
   },
   {
     "id": 39,
@@ -543,8 +543,8 @@
         "D": "11"
       }
     ],
-    "answer": "C",
-    "explanation": "このプログラムでは、4 ** 2 + 5という式が計算されます。4 ** 2は4の2乗で16、16 + 5は21になります。従って、正しい出力結果は選択肢Cの23です。"
+    "answer": "A",
+    "explanation": "このプログラムでは、4 ** 2 + 5という式が計算されます。4 ** 2は4の2乗で16、16 + 5は21になります。従って、正しい出力結果は選択肢Aの21です。"
   },
   {
     "id": 40,

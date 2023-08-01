@@ -15,17 +15,17 @@
   },
   {
     "id": 2,
-    "question": "以下のプログラムを実行した際の出力結果を選んでください。\n\nprint('出力結果:')\ntry:\n  raise Exception('開始', 'エラー発生')\n  print('スタート')\nexcept IOError as msg:\n  print('IOError発生:', msg.args[0])\nexcept Exception as msg:\n  print('未知のエラー発生:', msg.args[1])\nelse:\n  print('Else表示')",
+    "question": "数値リストから最大値を見つけるためにはどの組み込み関数を使うべきでしょうか？",
     "choices": [
       {
-        "A": "出力結果: IOError発生:開始",
-        "B": "出力結果:未知のエラー発生:開始 エラー発生 Else表示",
-        "C": "出力結果:未知のエラー発生: エラー発生",
-        "D": "出力結果:未知のエラー発生:開始"
+        "A": "max()",
+        "B": "largest()",
+        "C": "big()",
+        "D": "high()"
       }
     ],
-    "answer": "D",
-    "explanation": "このプログラムはExceptionを発生させ、IOError以外の例外をキャッチするため、'未知のエラー発生:開始'が出力されます。"
+    "answer": "A",
+    "explanation": "max()は、引数として渡された数値やリストの最大値を返します。それ以外の選択肢はPythonの組み込み関数ではありません。"
   },
   {
     "id": 3,
@@ -67,11 +67,11 @@
       }
     ],
     "answer": "D",
-    "explanation": "バックスラッシュ(\\)はエスケープ文字であるため、文字列の中で直接使用するとエラーが発生します。バックスラッシュを文字として使用するには、raw文字列として表現する必要があります。そのため、選択肢Dのprint(r'D:\\home\\name\\python')が正しい入力です。"
+    "explanation": "バックスラッシュ(\\)はエスケープ文字であるため、文字列の中で直接使用すると期待した動きになりません。バックスラッシュを文字として使用するには、raw文字列として表現する必要があります。そのため、選択肢Dのprint(r'D:\\home\\name\\python')が正しい入力です。"
   },
   {
     "id": 6,
-    "question": "Pythonインタプリタで次のリストが与えられているとします: \narray = [6, [5, [1, 2]], 4, [3, 0]] 。\n2 を出力するために正しいインデックス操作を選んでください。",
+    "question": "Pythonインタプリタで次のリストが与えられているとします: \narray = [6, [5, [1, 2]], 4, [3, 0]] \n2 を出力するために正しいインデックス操作を選んでください。",
     "choices": [
       {
         "A": "array[1][1]",
@@ -99,17 +99,17 @@
   },
   {
     "id": 8,
-    "question": "次のプログラムを実行した際の出力結果を選びなさい。\n\ndef hoge(title, content='default_content', number=4):\n    content = 'content'\n    print(title, end=' ')\n    print(content, end=' ')\n    print(number)\n\nhoge(title='title_default', content='None', number=5)",
+    "question": "以下のコードの出力は何になりますか？\na = [1, 2, 3, 4, 5]\nprint(a[::-1])",
     "choices": [
       {
-        "A": "title_default content 4",
-        "B": "TypeError",
-        "C": "title_default default_content 4",
-        "D": "title_default content 5"
+        "A": "[5, 4, 3, 2, 1]",
+        "B": "[1, 2, 3, 4, 5]",
+        "C": "エラーメッセージが表示される",
+        "D": "None"
       }
     ],
-    "answer": "D",
-    "explanation": "関数 hoge は、引数 content の値を関数内で'content'に変更しています。また、引数 number はデフォルト値4ですが、関数呼び出し時に5が指定されているため、出力は'title_default content 5'となります。"
+    "answer": "A",
+    "explanation": "リストのスライシングにおいて、::の後に指定する数字はステップ数を示しており、-1を指定することでリストの順序を逆にします。"
   },
   {
     "id": 9,
@@ -141,17 +141,17 @@
   },
   {
     "id": 11,
-    "question": "以下のプログラムを実行した際の出力結果を選択してください。\n\nnumber_list = [3, 5, 7, 5, 5, 3, 7]; for i in range(number_list.count(5)): print(i, end=' ')",
+    "question": "以下のプログラムを実行した際の出力結果を選択してください。\n\nnumber_list = [3, 5, 7, 5, 5, 3, 7]\nfor i in range(number_list.count(5)):\nprint(i, end=' ')",
     "choices": [
       {
-        "A": "555",
-        "B": "012",
-        "C": "01234",
-        "D": "123"
+        "A": "5 5 5",
+        "B": "0 1 2",
+        "C": "0 1 2 3 4",
+        "D": "1 2 3"
       }
     ],
     "answer": "B",
-    "explanation": "number_list.count(5)はリスト内の5の数を数え、3を返します。そのため、range(3)により0, 1, 2の整数が生成され、出力は012となります。"
+    "explanation": "number_list.count(5)はリスト内の5の数を数え、3を返します。そのため、range(3)により0, 1, 2の整数が生成され、出力は0 1 2となります。"
   },
   {
     "id": 12,
@@ -169,21 +169,21 @@
   },
   {
     "id": 13,
-    "question": "次の中からmutableなものをまとめたものとして適切なものを選んでください。",
+    "question": "次の中からmutableなものとして適切なものを選んでください。",
     "choices": [
       {
-        "A": "タプルと配列",
-        "B": "存在しない",
-        "C": "配列",
+        "A": "タプルとリスト",
+        "B": "選択肢の中には存在しない",
+        "C": "リスト",
         "D": "タプル"
       }
     ],
     "answer": "C",
-    "explanation": "mutableなオブジェクトは変更可能で、リスト（配列）はその例です。タプルはimmutableなオブジェクトで変更できません。正答は配列です。"
+    "explanation": "mutableなオブジェクトは変更可能で、リストはその例です。タプルはimmutableなオブジェクトで変更できません。正答はリストです。"
   },
   {
     "id": 14,
-    "question": "以下のプログラムを実行した際の出力結果を選んでください。\n\nuser1, user2, user3, user4 = '', 'yamada', 'kobayashi', 'watanabe'; chosen_user = user1 or user2 or user3 or user4; print(chosen_user)",
+    "question": "以下のプログラムを実行した際の出力結果を選んでください。\n\nuser1, user2, user3, user4 = '', 'yamada', 'kobayashi', 'watanabe'\nchosen_user = user1 or user2 or user3 or user4\nprint(chosen_user)",
     "choices": [
       {
         "A": "yamada",
@@ -193,7 +193,7 @@
       }
     ],
     "answer": "A",
-    "explanation": "Pythonでは空文字列はFalseと評価され、or演算子は最初にTrueと評価される値を返します。そのため、出力結果は'yamada'となります。"
+    "explanation": "Pythonでは空文字列はFalseと評価され、or演算子は最初にTrueと評価される値を返します(短絡評価)。そのため、出力結果は'yamada'となります。"
   },
   {
     "id": 15,
@@ -206,40 +206,40 @@
         "D": "False"
       }
     ],
-    "answer": "C",
+    "answer": "D",
     "explanation": "タプル同士の比較は、要素ごとに比較されます。最初の共通要素で大小が決まれば、その結果が返されます。この場合、最初の要素は同じ(2)で、次の要素で(4 < 3)がFalseとなります。よって、Falseが出力されます。"
   },
   {
     "id": 16,
-    "question": "次のプログラムを実行したときの出力結果を選んでください。\n\ns = 'jump\\nover\\nthe\\twall'\\n\\nprint(len(s))",
+    "question": "次のプログラムを実行したときの出力結果を選んでください。\n\ns = 'jump\\\\nover\\\\nthe\\\twall'\nprint(len(s))",
     "choices": [
       {
         "A": "17",
-        "B": "19",
-        "C": "13",
+        "B": "20",
+        "C": "19",
         "D": "16"
       }
     ],
     "answer": "B",
-    "explanation": "文字列内のエスケープシーケンス(\\nと\\t)はそれぞれ1文字としてカウントされます。この場合、文字列の長さは19になります。"
+    "explanation": "文字列内のエスケープシーケンス(\\nと\\t)はそれぞれ1文字としてカウントされます。この場合、文字列の長さは20になります。"
   },
   {
     "id": 17,
     "question": "次の条件の説明文のうち、誤っているものを選んでください。",
     "choices": [
       {
-        "A": "比較演算はブール演算子andおよびorで組み合わせることができ、また比較の結果はnotで否定することができる。これらの優先順位は比較演算子よりも高い。",
-        "B": "演算子isおよびis notは、2つのオブジェクトが完全に同一かどうかを調べる。",
+        "A": "比較演算は演算子andおよびorで組み合わせることができ、また比較の結果はnotで否定することができる。これらの優先順位は比較演算子よりも高い。",
+        "B": "演算子isおよびis notは、2つのオブジェクトが完全に同一か（または同一でないかしないか）どうかを調べる。",
         "C": "比較演算子inおよびnot inは、シーケンスに値が存在するか（または存在しないか）を調べる。",
-        "D": "ブール演算子andおよびorは、短絡演算子と呼ばれる。"
+        "D": "andおよびorは、論理演算子と呼ばれる。"
       }
     ],
     "answer": "A",
-    "explanation": "誤った説明はAです。実際には、ブール演算子andおよびorの優先順位は比較演算子よりも低いです。そのため、比較演算子が先に評価され、その結果を用いてブール演算が行われます。"
+    "explanation": "誤った説明はAです。実際には、論理演算子andおよびorの優先順位は比較演算子よりも低いです。そのため、比較演算子が先に評価され、その結果を用いて論理演算が行われます。"
   },
   {
     "id": 18,
-    "question": "次のプログラムを実行したときの出力結果を選んでください。",
+    "question": "次のプログラムを実行したときの出力結果を選んでください。\nnames1 = ['Sato', 'Kato', 'Ishida']\nnames2 = ['Yamada', 'Watanabe', 'Mori']\nnames3 = ['Suzuki', 'Takahashi', 'Ivanov']\noutput = zip(names1, names2, names3)\n    print(list(output))",
     "choices": [
       {
         "A": "[('Sato', 'Yamada', 'Suzuki'), ('Kato', 'Watanabe', 'Takahashi'), ('Ishida', 'Mori', 'Ivanov')]",
@@ -248,8 +248,8 @@
         "D": "[('Sato', 'Kato', 'Ishida'), ('Yamada', 'Watanabe', 'Mori'), ('Suzuki', 'Takahashi', 'Ivanov')]"
       }
     ],
-    "answer": "D",
-    "explanation": "zip関数を使ってリストdicの要素を転置し、それをtuple形式で出力します。"
+    "answer": "A",
+    "explanation": "zip関数を使って3つのリストをまとめ、それらの各要素を組み合わせて新たなタプルを作ります。結果として得られるリストはタプルのリストになります。"
   },
   {
     "id": 19,
@@ -295,31 +295,31 @@
   },
   {
     "id": 22,
-    "question": "次のprint文を実行した場合の出力結果を選択してください。\n\nprint('出力結果:')\nprint('円周率は%5.3fである。' % math.pi)",
+    "question": "関数を定義する際にはどのキーワードを使いますか？",
     "choices": [
       {
-        "A": "出力結果:円周率は3.141である。",
-        "B": "出力結果:円周率は5.142である。",
-        "C": "出力結果:円周率は3.143である。",
-        "D": "出力結果:円周率は5.551である。"
+        "A": "def",
+        "B": "func",
+        "C": "define",
+        "D": "function"
       }
     ],
     "answer": "A",
-    "explanation": "print文は、'円周率は%5.3fである。' % math.pi の部分で、円周率を3.141として表示します。"
+    "explanation": "関数を定義する際にはdefというキーワードを使用します。それ以外の選択肢はPythonのキーワードではありません。"
   },
   {
     "id": 23,
-    "question": "次のプログラムを実行した場合の出力結果を選択してください。\n\nprint('出力結果:')\ntry:\n  raise Exception('開始前', 'Exception発生')\n  print('開始')\nexcept IOError as msg:\n  print('IOError発生:', msg.args[0])\nexcept Exception as msg:\n  print('予期せぬ問題発生:', msg.args[1])\nelse:\n  print('Else表示')",
+    "question": "Pythonで使われる特殊メソッド(マジックメソッド)とは何を指しますか？",
     "choices": [
       {
-        "A": "出力結果:予期せぬ問題発生:開始前 Exception発生 Else表示",
-        "B": "出力結果:予期せぬ問題発生: Exception発生",
-        "C": "出力結果:予期せぬ問題発生:開始前",
-        "D": "出力結果: IOError発生:開始前"
+        "A": "Pythonのライブラリにあるメソッド",
+        "B": "Pythonで定義されているすべてのメソッド",
+        "C": "特殊なビルトイン動作を実装するためのメソッド",
+        "D": "暗黙的に実行されるメソッド"
       }
     ],
     "answer": "C",
-    "explanation": "プログラムは、tryブロックでExceptionを発生させます。IOErrorではないため、IOErrorをキャッチするexceptブロックは実行されません。そのため、次のexceptブロックでExceptionをキャッチし、'予期せぬ問題発生:' に続いてmsg.args[1]（'開始前'）が出力されます。"
+    "explanation": "マジックメソッドは、Python内の特殊なビルトイン動作を実装するためのメソッドであり、これらのメソッドは特定の記号を二重に使用して定義されます（例えば、__init__や__str__など）。"
   },
   {
     "id": 24,
@@ -337,17 +337,17 @@
   },
   {
     "id": 25,
-    "question": "次のプログラムを実行した場合の出力結果を選択してください。\n\nclass Sample:\n\n  c_list = []\n\n  def add_c_list(self, data):\n    self.c_list.append(data)\n\nprint('出力結果:', end=' ')\nsample1 = Sample()\nsample1.add_c_list('データ1')\n\nsample2 = Sample()\nsample2.add_c_list('データ2')\n\nfor item_data in sample1.c_list:\n  print(item_data, end=' ')",
+    "question": "numpyライブラリのarray関数は何をしますか？",
     "choices": [
       {
-        "A": "出力結果:データ1",
-        "B": "出力結果:データ1 データ2",
-        "C": "出力結果:データ2",
-        "D": "出力結果:"
+        "A": "配列を生成します",
+        "B": "配列をソートします",
+        "C": "配列に新しい要素を追加します",
+        "D": "配列の最大値を見つけます"
       }
     ],
-    "answer": "B",
-    "explanation": "c_listはSampleクラスのクラス変数です。そのため、sample1とsample2が共有しています。sample1にデータ1を追加し、sample2にデータ2を追加した後、sample1.c_listの要素を出力すると、'出力結果:データ1 データ2'となります。"
+    "answer": "A",
+    "explanation": "numpyライブラリのarray関数は、リストを受け取り、それをnumpyの配列に変換します。これにより、行列演算や高度な数学的関数など、numpyの提供する多くの機能を配列に対して使用できるようになります。"
   },
   {
     "id": 26,
@@ -356,12 +356,12 @@
       {
         "A": "pip installs",
         "B": "pip packages",
-        "C": "pip list",
+        "C": "pip freeze",
         "D": "pip show"
       }
     ],
     "answer": "C",
-    "explanation": "仮想環境にインストールされたすべてのパッケージを表示するためには、'pip list'コマンドを使用します。"
+    "explanation": "仮想環境にインストールされたすべてのパッケージを表示するためには、'pip freeze'コマンドを使用します。"
   },
   {
     "id": 27,
@@ -379,31 +379,31 @@
   },
   {
     "id": 28,
-    "question": "Pythonインタプリタにて\n\n>>>nested_list = [7, [4, [3, 1]], 5, [2, 9]]\nと入力した時、1 を出力するための入力として正しいものを選びなさい。",
+    "question": "以下のプログラムを実行した際の出力結果として正しいものを選択しなさい。\ndic = [\n    ['Yamada', 'Suzuki', 'Kato'],\n    ['Tanaka', 'Sato', 'Ito'],\n    ['Kobayashi', 'Nakamura', 'Watanabe'],\n]\n\nprint(list(zip(*dic)))",
     "choices": [
       {
-        "A": "nested_list[1][1][1]",
-        "B": "nested_list[1][0]",
-        "C": "nested_list[2][0]",
-        "D": "nested_list[0][1][1]"
+        "A": "[('Yamada', 'Tanaka', 'Kobayashi'), ('Suzuki', 'Sato', 'Nakamura'), ('Kato', 'Ito', 'Watanabe')]",
+        "B": "[('Yamada', 'Suzuki', 'Kato'), ('Tanaka', 'Sato', 'Ito'), ('Kobayashi', 'Nakamura', 'Watanabe')]",
+        "C": "[('Yamada', 'Tanaka', 'Kobayashi'), ('Suzuki', 'Sato', 'Nakamura')]",
+        "D": "[('Yamada', 'Suzuki', 'Kato'), ('Sato', 'Ito', 'Watanabe')]"
       }
     ],
     "answer": "A",
-    "explanation": "入力されたリストはネストされたリストです。1 を出力するには、nested_list[1][1][1]を参照する必要があります。これは、nested_listの2番目の要素（[4, [3, 1]]）の2番目の要素（[3, 1]）の2番目の要素（1）を取得します。"
+    "explanation": "zip()関数は複数のイテラブル（ここではリスト）の要素をまとめる関数で、*dicとすることでリストのアンパッキングが行われます。それぞれのリストから同じ位置の要素がまとめられるため、元の3つのリストから1つ目の要素たち、2つ目の要素たち、3つ目の要素たちがまとめられたタプルが生成されます。"
   },
   {
     "id": 29,
-    "question": "以下のプログラムを実行した際の出力結果を選びなさい。\n\nfor i in range(18):\n    if i % 4 == 0:\n        print('{}は4で割り切れます'.format(i), end=' ')\n    elif i > 7 and i % 3 == 0:\n        break\n    else:\n        continue",
+    "question": "以下のPythonコードを実行したときの出力は何になるでしょうか？\ndef outer_func():\n    x = 'outer'\n    def inner_func():\n        nonlocal x\n        x = 'inner'\n        print('Inner:', x, end=\" \")\n    inner_func()\n    print('Outer:', x, end=\" \")\n\nouter_func()",
     "choices": [
       {
-        "A": "0は4で割り切れます 4は4で割り切れます 8は4で割り切れます",
-        "B": "0は4で割り切れます 4は4で割り切れます",
-        "C": "0は4で割り切れます 4は4で割り切れます 8は4で割り切れます 12は4で割り切れます",
-        "D": "0は4で割り切れます 4は4で割り切れます 8は4で割り切れます 12は4で割り切れます 16は4で割り切れます"
+        "A": "Inner: inner Outer: inner",
+        "B": "Inner: inner Outer: outer",
+        "C": "Inner: outer Outer: inner",
+        "D": "エラーメッセージが表示される"
       }
     ],
     "answer": "A",
-    "explanation": "プログラムは0から17までの範囲で繰り返し処理を行います。4で割り切れる場合、出力が行われます。また、7より大きく3で割り切れる場合、繰り返し処理が終了します。そのため、出力結果は0は4で割り切れます 4は4で割り切れます 8は4で割り切れますになります。"
+    "explanation": "上記のコードでは、内部関数inner_funcでnonlocalキーワードを使っています。このキーワードを使用すると、ネストされた関数内部で親関数のローカル変数を変更することができます。したがって、inner_funcが呼び出されると、xは'inner'に変更され、その変更はouter_funcのスコープでも保持されます。その結果、inner_funcとouter_funcの両方で出力されるxの値は'inner'になります。"
   },
   {
     "id": 30,
@@ -449,7 +449,7 @@
   },
   {
     "id": 33,
-    "question": "次のリスト内包表記を実行した際の出力結果を選んでください。",
+    "question": "次のリスト内包表記を実行した際の出力結果を選んでください。\n[(i, j) for i in range(3) for j in range(1, 4) if i != j]",
     "choices": [
       {
         "A": "[(0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 1), (2, 3)]",
